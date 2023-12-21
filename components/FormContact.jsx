@@ -55,7 +55,7 @@ function FormContact() {
             <input type="submit" value="Send your Message" />
 
             {successMsg && <p className="successMsg">{successMsg}</p>}
-            {errorMsg && <p>{errorMsg}</p>}
+            {errorMsg && <p className="errorMsg">{errorMsg}</p>}
 
             <ErrorToast errorMsg={errorMsg} successMsg={successMsg} />
         </form>
