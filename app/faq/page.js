@@ -54,7 +54,7 @@ async function Consultations() {
 					</article>
 				))}
 			</section>
-			<h2>Still have unanswered questions?</h2>
+			<h1>Still have unanswered questions?</h1>
 			<Link className="link-button" href="/contact">
 				Get in Touch
 			</Link>
