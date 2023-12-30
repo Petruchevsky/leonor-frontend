@@ -31,18 +31,27 @@ function FormContact() {
                 throw new Error('Something went wrong');
             }
 
-            setSuccessMsg("Message sent successfully!");  // Establecer mensaje de éxito
-            setName("")
-            setEmail("")
-            setSubject("")
-            setMessage("")
+            setSuccessMsg("Message sent Successfully!");
+          
 
             setTimeout(() => {
-                location.reload();
-            }, 5000);
+                setName("")
+                setEmail("")
+                setSubject("")
+                setMessage("")
+                setSuccessMsg("We will respond as soon as possible!");
+            }, 4000);
 
         } catch (error) {
-            setErrorMsg(error.message);  // Establecer mensaje de error
+            setErrorMsg(error.message);
+
+            setTimeout(() => {
+                setName("")
+                setEmail("")
+                setSubject("")
+                setMessage("")
+                setErrorMsg("Please refresh the page, and try again...");
+            }, 4000);
         }
     }
 
