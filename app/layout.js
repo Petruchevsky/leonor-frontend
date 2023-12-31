@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
 							height={50}
 							className="esp-flag"
 						/>
-					ES</Link>
+					</Link>
 					<Link
 						href="https://leonorb-homeopath.setmore.com/leonorberdichevsky"
 						target="_blank"
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
 							Click<span>Here</span>to Book a New or Follow Up Consultation
 						</h2>
 					</Link>
-					<Link className="flagContainerUK" href="https://leonor-frontend.vercel.app/">EN
+					<Link className="flagContainerUK" href="https://leonor-frontend.vercel.app/">
 						<Image
 							src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701951143/UK_Flag_1c46c82e8a.png"
 							alt="imagen de bandera británica"
