@@ -2,6 +2,7 @@ import ErrorToast from "@/components/ErrorToast";
 import Link from "next/link";
 import "./consultations.css"
 import Markdown from "@/utils/Markdown";
+import { headers } from "@/next.config";
 
 export const metadata = {
     title: "Consultations",
@@ -11,8 +12,12 @@ export const metadata = {
 const getConsultations = async () => {
 	try {
 		const res = await fetch(`${process.env.STRAPI}/api/consultation`, {
+			headers: {
+			  'Cache-Control': 'no-store, must-revalidate',
+			},
 			next: { tags: ["mi-etiqueta-de-cache"] },
-		});
+		  });
+		  
 
 		if (!res.ok) {
 			const errorData = await res.json();
