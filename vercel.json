@@ -1,0 +1,18 @@
+{
+    "routes": [
+      {
+        "src": "/api/revalidate",
+        "methods": ["POST"],
+        "headers": { "Cache-Control": "no-store, must-revalidate" }
+      },
+      {
+        "src": "/api/*",
+        "headers": { "Cache-Control": "public, max-age=31536000, s-maxage=31536000" }
+      },
+      {
+        "src": "/(.*)",
+        "headers": { "Cache-Control": "public, max-age=31536000, s-maxage=31536000" }
+      }
+    ]
+  }
+  
