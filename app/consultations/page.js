@@ -11,12 +11,7 @@ export const metadata = {
 
 const getConsultations = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/consultation`, {
-			headers: {
-			  'Cache-Control': 'no-store, must-revalidate',
-			},
-			next: { tags: ["mi-etiqueta-de-cache"] },
-		  });
+		const res = await fetch(`${process.env.STRAPI}/api/consultation`)
 		  
 
 		if (!res.ok) {
