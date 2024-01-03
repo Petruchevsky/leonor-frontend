@@ -5,7 +5,8 @@ export function POST() {
 
   console.log("Running Webhook...")
   // revalidateTag('mi-etiqueta-de-cache');
-  revalidatePath('/', 'layout');
+  revalidatePath('/');
+  revalidatePath('/testimonials');
 
   return NextResponse.json({ message: 'Cache revalidated' });
 }
