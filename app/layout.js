@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body>
 				<div className="topHeader">
-					<Link className="flagContainerES" href="https://leonor-frontend-cl.vercel.app/">
+					<Link className="flagContainerES" href="https://www.leonorb-homeopata.com/">
 						<Image
 							src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701951143/ESP_Flag_3119969f4f.png"
 							alt="imagen de bandera española"
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
 							Click<span>Here</span>to Book a New or Follow Up Consultation
 						</h2>
 					</Link>
-					<Link className="flagContainerUK" href="https://leonor-frontend.vercel.app/">
+					<Link className="flagContainerUK" href="https://www.leonorb-homeopath.uk/">
 						<Image
 							src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701951143/UK_Flag_1c46c82e8a.png"
 							alt="imagen de bandera británica"
