@@ -5,7 +5,6 @@ import { IoClose } from "react-icons/io5";
 import { FaRegCaretSquareDown } from "react-icons/fa";
 import "./Navbar.css";
 import Link from "next/link";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
@@ -14,23 +13,43 @@ function Navbar() {
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
 
+
 	const [isOpen, setIsOpen] = useState(false);
 	const [dropdownOpen, SetDropdownOpen] = useState(false);
 
+
 	const handleClick = () => {
 		SetDropdownOpen(!dropdownOpen);
-		console.log(dropdownOpen);
 	};
 
+
 	useEffect(() => {
-		SetDropdownOpen(false)
-		setIsOpen(false); // Cerrar el menú cuando cambie la ruta
+		SetDropdownOpen(false);
+		setIsOpen(false);
 	}, [pathname, searchParams]);
 
+
+	useEffect(() => {
+		const closeMenu = (event) => {
+			
+			if (isOpen && !event.target.closest('.menu')) {
+				setIsOpen(false);
+				SetDropdownOpen(false);
+			}
+		};
+	
+		document.addEventListener('click', closeMenu);
+	
+		return () => {
+			document.removeEventListener('click', closeMenu);
+		};
+	}, [isOpen]);
+	
+	
 	return (
 		<nav className={`${isOpen ? "overlay" : ""}`}>
 			<div className="mobileNav">
-				<ImMenu3 className="burger" onClick={() => setIsOpen(!isOpen)} />
+				<ImMenu3 className="burger" onClick={()=> setIsOpen(!isOpen)} />
 				<h2 className="onlineHomeo">Online Homeopath</h2>
 			</div>
 			<ul className={`menu ${isOpen ? "showMenu" : "hideMenu"}`}>

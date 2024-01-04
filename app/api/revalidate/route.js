@@ -3,8 +3,6 @@ import { NextResponse } from 'next/server';
 
 export function POST() {
 
-  console.log("Running Webhook...")
-  // revalidateTag('mi-etiqueta-de-cache');
   revalidatePath('/', 'page');
   revalidatePath('/consultations', 'page');
   revalidatePath('/fees', 'page');
@@ -16,6 +14,8 @@ export function POST() {
   revalidatePath('/privacy-police', 'page');
   revalidatePath('/terms-and-conditions', 'page');
   revalidatePath('/testimonials', 'page');
+  
+  console.log("Running Webhook...");
 
   return NextResponse.json({ message: 'Cache revalidated' });
 }
