@@ -5,7 +5,7 @@ import Link from "next/link";
 import Markdown from "@/utils/Markdown";
 
 export const metadata = {
-	  title: "Leonor-B Homeopath Online",
+	  title: "Home",
 	  description: "Welcome to my Site",
   }
 
